@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="solution-2.css" />
+    <title>My Blog Post</title>
+    <style>
+      body {
+        line-height: 1.6;
+        margin: 20px;
+      }
+      .header {
+        text-align: center;
+      }
+
+      ol {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      code {
+        background-color: #f4f4f4;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .blockquote {
+        background-color: #ededed;
+        margin: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Exploring Classless CSS</h1>
+      <p>
+        Classless CSS is a minimalistic way to style web pages without assigning
+        classes or IDs to elements.
+      </p>
+    </div>
+    <div>
+      <h3>Key Features of Classless CSS</h3>
+      <ol>
+        <li>
+          Semantic Styling: Classless CSS frameworks utilize the semantic nature
+          of HTML elements. For instance, an `h1` tag will automatically receive
+          styles appropriate for a heading, such as increased font size and
+          boldness
+        </li>
+        <li>
+          Lightweight: These frameworks are typically very small in size, making
+          them ideal for performance-sensitive applications where loading speed
+          is crucial1
+        </li>
+      </ol>
+
+      <h3>How to use Classless CSS?</h3>
+      <ol>
+        <li>
+          <p>
+            We can link to the Normalize.css file directly from a CDN in the
+            <code>&lt;head&gt;</code> section of your HTML document.
+          </p>
+          <pre><code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"&gt;</code></pre>
+        </li>
+        <li>
+          <p>
+            We also can copy the css code into a CSS file and link the CSS file
+            (as done in this exercise)
+          </p>
+        </li>
+      </ol>
+      <div class="blockquote">
+        <blockquote
+          cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+        >
+          Normalize.css makes browsers render all elements more consistently and
+          in line with modern standards. It precisely targets only the styles
+          that need normalizing.
+        </blockquote>
+        <p>MDN, <cite>MDN</cite></p>
+      </div>
+    </div>
+  </body>
+</html>
