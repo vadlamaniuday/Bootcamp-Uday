@@ -1,0 +1,49 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9eafd;
+}
+
+.content {
+  background-color: #fbfbfb;
+  padding: clamp(10px, 2vw, 30px);
+  text-align: center;
+  width: min(90%, 600px);
+  max-height: min(80vh, 600px);
+  overflow: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: clamp(5px, 1vw, 15px);
+}
+
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: clamp(10px, 2vw, 20px);
+}
+.content table th,
+.content table td {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.content th,
+.content td {
+  border: 1px solid #ccc;
+  padding: 1vw;
+  text-align: left;
+}
+h1 {
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
