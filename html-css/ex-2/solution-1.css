@@ -1,17 +1,17 @@
-:root{
-  --primary:#074799;
-  --secondary : #F8FAFC;
-  --header-size : 2em ; 
-  --body-size :1em;
-  --spacing : 12px;
+:root {
+  --primary: #074799;
+  --secondary: #f8fafc;
+  --header-size: 2em;
+  --body-size: 1em;
+  --spacing: 12px;
 }
 
-body{
+body {
   font-size: var(--body-size);
   background-color: var(--secondary);
   padding: var(--spacing);
-  
 }
+
 nav a {
   color: var(--primary);
   text-decoration: none;
@@ -27,10 +27,14 @@ table {
   margin: var(--spacing) 0;
 }
 
-tr,th, td{
+tr,
+th,
+td {
   border: 1px solid var(--primary);
 }
-p,h2, h3 {
+p,
+h2,
+h3 {
   color: var(--primary);
   margin: var(--spacing) 0;
 }
@@ -58,4 +62,3 @@ p,h2, h3 {
 .phone-details img {
   margin-right: var(--spacing);
 }
-

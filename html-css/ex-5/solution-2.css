@@ -1,8 +1,6 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f8fafc;
-  color: #333;
 }
 
 header {
@@ -14,13 +12,11 @@ header {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
+
   grid-template-areas:
-    "header"
-    "main"
-    "sidebar1"
-    "sidebar2";
+    "header header"
+    "main sidebar1"
+    "main sidebar2";
   gap: 1rem;
   padding: 1rem;
 }
@@ -29,8 +25,6 @@ main {
   grid-area: main;
   background-color: #f4f4f4;
   padding: 1rem;
-  overflow-y: auto;
-  max-height: 60vh;
 }
 
 section:nth-of-type(1) {
@@ -48,14 +42,12 @@ section:nth-of-type(2) {
 h2,
 h3 {
   margin-top: 10px;
-  color: #333;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1rem;
-  border: 1px solid #ddd;
 }
 
 table,
@@ -86,19 +78,4 @@ ol li {
 
 ol li div {
   margin-bottom: 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .container {
-    grid-template-columns: 60% 40%;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "header header"
-      "main sidebar1"
-      "main sidebar2";
-  }
-
-  main {
-    max-height: none;
-  }
 }
