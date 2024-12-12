@@ -1,0 +1,70 @@
+:root {
+  --primary: #074799;
+  --secondary: #f8fafc;
+  --header-size: 2em;
+  --body-size: 1em;
+  --font-size: 14px;
+  --spacing: 12px;
+}
+
+body {
+  font-size: var(--body-size, 10px);
+  background-color: var(--secondary, #f2f9ff);
+  padding: var(--spacing, 10px);
+}
+nav a {
+  color: var(--primary, #441752);
+  text-decoration: none;
+  margin: var(--spacing, 10px);
+  border: 1px solid var(--primary, #441752);
+  border-radius: 10px;
+  padding: var(--spacing, 10px);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing, 10px) 0;
+}
+tbody tr:nth-child(even) {
+  background-color: #d9eafd;
+}
+tbody tr:nth-child(odd) {
+  background-color: #bcccdc;
+}
+
+tr,
+th,
+td {
+  border: 1px solid var(--primary, #441752);
+}
+p,
+h2,
+h3 {
+  color: var(--primary, #441752);
+  margin: var(--spacing, 10px) 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing, 10px);
+}
+
+.sidebar {
+  flex: 1;
+  max-width: 30%;
+}
+
+.main-content {
+  flex: 2;
+}
+
+.phone-details {
+  display: flex;
+  align-items: center;
+}
+
+.phone-details img {
+  margin-right: var(--spacing, 10px);
+}

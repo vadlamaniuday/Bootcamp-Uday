@@ -1,0 +1,87 @@
+:root {
+  --primary: #074799;
+  --secondary: #f8fafc;
+  --header-size: 2em;
+  --body-size: 1em;
+  --font-size: 14px;
+  --spacing: 12px;
+
+  --background-color: var(--secondary);
+  --table-bg-color-even: #d9eafd;
+  --table-bg-color-odd: #bcccdc;
+}
+
+body {
+  font-size: var(--body-size, 10px);
+  background-color: var(--background-color, #f2f9ff);
+  padding: var(--spacing, 10px);
+}
+nav a {
+  color: var(--primary, #441752);
+  text-decoration: none;
+  margin: var(--spacing, 10px);
+  border: 1px solid var(--primary, #441752);
+  border-radius: 10px;
+  padding: var(--spacing, 10px);
+}
+
+table {
+  width: 100%;
+
+  margin: var(--spacing, 10px) 0;
+  color: var(--primary);
+}
+tbody tr:nth-child(even) {
+  background-color: var(--table-bg-color-even);
+}
+tbody tr:nth-child(odd) {
+  background-color: var(--table-bg-color-odd);
+}
+
+td {
+  color: var(--primary);
+  border: 1px solid var(--primary, #441752);
+}
+p,
+li,
+h1,
+h2,
+h3 {
+  color: var(--primary, #441752);
+}
+.dark-theme {
+  --primary: #f8f8f8;
+  --secondary: #131010;
+
+  --background-color: #1e1e1e;
+
+  --table-bg-color-even: #4f4557;
+  --table-bg-color-odd: #6d5d6e;
+
+  --link-color: #81a1c1;
+  --link-hover-color: #e0e0e0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing, 10px);
+}
+
+.sidebar {
+  flex: 1;
+  max-width: 30%;
+}
+
+.main-content {
+  flex: 2;
+}
+
+.phone-details {
+  display: flex;
+  align-items: center;
+}
+
+.phone-details img {
+  margin-right: var(--spacing, 10px);
+}
