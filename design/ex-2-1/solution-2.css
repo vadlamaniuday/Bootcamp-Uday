@@ -1,0 +1,84 @@
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  font-family: "Merriweather", serif;
+  color: #333;
+}
+
+.instructions {
+  background-color: #eaeaea;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.instructions p {
+  margin: 0;
+}
+
+.drop-cap::first-letter {
+  font-size: 3em;
+  float: left;
+  margin-right: 0.1em;
+  margin-top: 0.1em;
+  font-weight: bold;
+  color: #1a5f7a;
+  line-height: 0.8;
+}
+
+.text-shadow {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  color: #2c3e50;
+}
+
+.text-clip {
+  background-image: url("./img.png");
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.variable-font-demo {
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.variable-font-demo.active {
+  font-weight: 700;
+  color: #e74c3c;
+  transform: scale(1.05);
+}
+
+code {
+  font-family: "Fira Mono", monospace;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  display: block;
+  margin: 20px 0;
+}

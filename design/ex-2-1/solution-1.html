@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="solution-1.css" />
+    <title>Exercise 2 - Solution 1</title>
+  </head>
+  <body>
+    <div class="instructions">
+      <p>Level 1: Use the same webpage. Add a snippet of JS code (10 lines).</p>
+      <p>
+        Apply basic font styles using system fonts (e.g., Arial, Times New
+        Roman, Courier).
+      </p>
+      <p>
+        Change the weights and apply different weight to different classes.
+        Update the page to inform which part has which weight of font.
+      </p>
+    </div>
+
+    <div class="container">
+      <h1>Exercise 1: Basics of Fonts</h1>
+
+      <div class="weight-guide">
+        <div class="weight-box th">
+          <h3>Light Weight (300)</h3>
+          <p>Thin, delicate text</p>
+        </div>
+        <div class="weight-box fo">
+          <h3>Normal Weight (400)</h3>
+          <p>Standard body text</p>
+        </div>
+        <div class="weight-box se">
+          <h3>Bold Weight (700)</h3>
+          <p>Strong, emphasized text</p>
+        </div>
+      </div>
+
+      <h2>Font Weight Exploration</h2>
+
+      <p class="light-text">
+        <strong>Light Weight (300):</strong> This text demonstrates the lightest
+        font weight available in Arial. Notice how it appears thinner and more
+        delicate. Light weights are excellent for minimal designs, subtle
+        information, or when you want to create a sense of elegance and
+        airiness. It's particularly effective for supporting text or when you
+        want to reduce visual noise.
+      </p>
+
+      <p class="normal-text">
+        <strong>Normal Weight (400):</strong> This is the standard font weight
+        used in most body text. It strikes a perfect balance between readability
+        and visual clarity. Normal weight ensures that text is neither too thin
+        to strain the eyes nor too bold to appear aggressive. Most paragraphs,
+        articles, and standard content use this weight as their default.
+      </p>
+
+      <p class="bold-text">
+        <strong>Bold Weight (700):</strong> Bold text commands attention and
+        emphasis. When you want to highlight key information, draw the reader's
+        eye, or create a strong visual hierarchy, bold weight is your go-to
+        choice. It makes text appear more substantial and powerful, perfect for
+        headings, important statements, or areas requiring immediate focus.
+      </p>
+
+      <h2>Understanding Font Weights</h2>
+      <p>
+        Font weights range from thin (100) to extra bold (900). The three
+        primary weights we're exploring today are:
+      </p>
+      <ul>
+        <li class="th">300 (Light): Delicate and minimal</li>
+        <li class="fo">400 (Normal): Standard readability</li>
+        <li class="se">700 (Bold): Strong emphasis</li>
+      </ul>
+
+      <h2>JavaScript Snippet: Weight Exploration</h2>
+      <pre><code>
+// Demonstrating font weight characteristics
+function exploreFontWeights() {
+    const weights = [
+        { value: 300, description: 'Light - Delicate text' },
+        { value: 400, description: 'Normal - Standard text' },
+        { value: 700, description: 'Bold - Emphasized text' }
+    ];
+
+    weights.forEach(weight => {
+        console.log(`Font Weight: ${weight.value} - ${weight.description}`);
+    });
+}
+
+exploreFontWeights();
+        </code></pre>
+    </div>
+  </body>
+</html>

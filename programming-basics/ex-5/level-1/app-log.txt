@@ -1,0 +1,6 @@
+[32m 2024-12-17T08:29:51.594Z info: Starting the application...[39m
+[32m 2024-12-17T08:29:51.598Z info: [32mOperation completed successfully.[39m[32m[39m
+[32m 2024-12-17T08:29:55.184Z info: Starting the application...[39m
+[32m 2024-12-17T08:29:55.188Z info: [32mOperation completed successfully.[39m[32m[39m
+[32m 2024-12-17T08:29:58.618Z info: Starting the application...[39m
+[32m 2024-12-17T08:29:58.622Z info: [32mOperation completed successfully.[39m[32m[39m

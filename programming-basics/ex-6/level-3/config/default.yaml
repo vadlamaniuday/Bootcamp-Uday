@@ -1,0 +1,18 @@
+dbConfig:
+  type: sqlite
+  path: ./database.sqlite
+
+logging:
+  level: debug
+  file: app-log.txt
+
+commands:
+  - name: sin
+    file: mathLib.js
+    function: sin
+  - name: cos
+    file: mathLib.js
+    function: cos
+  - name: sqrt
+    file: mathLib.js
+    function: sqrt

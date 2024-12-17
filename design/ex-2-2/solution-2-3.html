@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="solution-2-3.css" />
+    <title>Color Swatches</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    <h1>Color Swatch</h1>
+    <main>
+      <h1>Color Swatches</h1>
+      <div class="controls">
+        <div class="control-group">
+          <label>
+            Hue:
+            <input type="range" id="hue" min="0" max="360" value="180" />
+            <span id="hueValue">180</span>
+          </label>
+        </div>
+        <div class="control-group">
+          <label>
+            Saturation:
+            <input type="range" id="saturation" min="0" max="100" value="100" />
+            <span id="saturationValue">100</span>%
+          </label>
+        </div>
+        <div class="control-group">
+          <label>
+            Lightness:
+            <input type="range" id="lightness" min="0" max="100" value="50" />
+            <span id="lightnessValue">50</span>%
+          </label>
+        </div>
+      </div>
+      <div id="swatchGrid" class="swatch-grid"></div>
+    </main>
+
+    <script>
+      // Constants
+      const STEPS = {
+        saturation: 20,
+        lightness: 20,
+      };
+
+      // Utility functions
+      function createHSLColor(hue, saturation, lightness) {
+        return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+      }
+
+      function shouldUseWhiteText(lightness) {
+        return lightness < 50;
+      }
+
+      // Swatch creation
+      function createSwatch(hue, saturation, lightness) {
+        const swatch = document.createElement("div");
+        const color = createHSLColor(hue, saturation, lightness);
+
+        swatch.className = "swatch";
+        swatch.style.backgroundColor = color;
+
+        const info = document.createElement("div");
+        info.className = "swatch-info";
+        info.textContent = `H:${hue} S:${saturation} L:${lightness}`;
+        info.style.color = shouldUseWhiteText(lightness) ? "white" : "black";
+
+        swatch.appendChild(info);
+
+        swatch.addEventListener("click", () => {
+          navigator.clipboard.writeText(color);
+          const originalText = info.textContent;
+          info.textContent = "Copied!";
+          setTimeout(() => {
+            info.textContent = originalText;
+          }, 1000);
+        });
+
+        return swatch;
+      }
+
+      function updateColorGrid(container, values) {
+        container.innerHTML = "";
+        const { hue, saturation, lightness } = values;
+
+        // Create full grid if no specific values are set
+        if (!saturation && !lightness) {
+          for (let s = 100; s >= 0; s -= STEPS.saturation) {
+            for (let l = 90; l >= 10; l -= STEPS.lightness) {
+              container.appendChild(createSwatch(hue, s, l));
+            }
+          }
+        } else {
+          // Create single row/column when saturation or lightness is fixed
+          if (saturation) {
+            for (let l = 90; l >= 10; l -= STEPS.lightness) {
+              container.appendChild(createSwatch(hue, saturation, l));
+            }
+          }
+          if (lightness) {
+            for (let s = 100; s >= 0; s -= STEPS.saturation) {
+              container.appendChild(createSwatch(hue, s, lightness));
+            }
+          }
+        }
+      }
+
+      // Controls setup
+      function setupControls(onChange) {
+        const controls = ["hue", "saturation", "lightness"];
+        const values = {};
+
+        controls.forEach((control) => {
+          const input = document.getElementById(control);
+          const display = document.getElementById(`${control}Value`);
+
+          input.addEventListener("input", () => {
+            const value = parseInt(input.value, 10);
+            display.textContent = value;
+            values[control] = value;
+            onChange(values);
+          });
+
+          // Initialize values
+          values[control] = parseInt(input.value, 10);
+          display.textContent = input.value;
+        });
+
+        return values;
+      }
+
+      // Initialize application
+      const container = document.getElementById("swatchGrid");
+      const values = setupControls((newValues) => {
+        updateColorGrid(container, newValues);
+      });
+
+      // Initial render
+      updateColorGrid(container, values);
+    </script>
+  </body>
+</html>

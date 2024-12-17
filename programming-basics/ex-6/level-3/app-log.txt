@@ -1,0 +1,9 @@
+[32m 2024-12-17T10:38:26.475Z info: Command: --add, Result: 60[39m
+[32m 2024-12-17T10:39:00.050Z info: Command: --add, Result: 60[39m
+[32m 2024-12-17T10:39:19.616Z info: Command: --add, Result: 60[39m
+[31m 2024-12-17T10:53:04.194Z error: Error: Unsupported command: E:\Code\Aganitha\programming-basics\ex-6\level-3\index.js[39m
+[32m 2024-12-17T10:53:25.155Z info: Operation: sin, Result: 0.9999999999932537[39m
+[32m 2024-12-17T10:53:40.971Z info: Operation: sqrt, Result: 25[39m
+[32m 2024-12-17T10:55:02.600Z info: Operation: sqrt, Result: 25[39m
+[32m 2024-12-17T10:55:11.336Z info: Operation: sqrt, Result: 25[39m
+[32m 2024-12-17T10:55:22.254Z info: Operation: sqrt, Result: 18.681541692269406[39m

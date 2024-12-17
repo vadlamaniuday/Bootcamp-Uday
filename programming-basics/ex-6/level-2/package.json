@@ -1,0 +1,28 @@
+{
+  "name": "ex-6-lvl-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "if not exist node_modules npm install",
+    "start": "cross-env NODE_ENV=development node index.js",
+    "start:prod": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env DEBUG=vadlamaniuday:* node index.js"
+  },
+  "keywords": [],
+  "author": "Vadlamani Uday",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "config": "^3.3.12",
+    "debug": "^4.4.0",
+    "dotenv": "^16.4.7",
+    "js-yaml": "^4.1.0",
+    "sqlite3": "^5.1.7",
+    "winston": "^3.17.0"
+  }
+}

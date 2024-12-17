@@ -1,0 +1,248 @@
+:root {
+  --primary-color-light: #fff5e6;
+  --primary-color-main: #44403a;
+  --primary-color-dark: #ffb74d;
+
+  --secondary-color-light: #e0f7fa;
+  --secondary-color-main: #00bcd4;
+  --secondary-color-dark: #0097a7;
+
+  --text-primary: var(--secondary-color-dark);
+  --text-secondary: var(--secondary-color-dark);
+  --background-primary: var(--secondary-color-light);
+  --background-secondary: var(--primary-color-light);
+}
+
+.color-theory-card {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--secondary-color-main);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 188, 212, 0.2);
+  padding: 30px;
+  max-width: 800px;
+  margin: 40px auto;
+  transition: all 0.3s ease;
+}
+
+.color-theory-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 188, 212, 0.3);
+  transform: translateY(-5px);
+}
+
+.color-theory-card h2 {
+  color: var(--primary-color-dark);
+  border-bottom: 2px solid var(--secondary-color-main);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.color-rule {
+  background-color: var(--secondary-color-light);
+  border-left: 4px solid var(--primary-color-main);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.color-rule h3 {
+  color: var(--secondary-color-dark);
+  margin-top: 0;
+}
+
+.color-code {
+  background-color: var(--primary-color-light);
+  color: var(--primary-color-dark);
+  font-family: "Courier New", monospace;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 15px 0;
+  border: 1px dashed var(--primary-color-main);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.light-text {
+  font-weight: 300;
+  background-color: #e6f3ff;
+  padding: 10px;
+  border-left: 4px solid #3498db;
+}
+
+.normal-text {
+  font-weight: 400;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-left: 4px solid #2ecc71;
+}
+
+.bold-text {
+  font-weight: 700;
+  background-color: #fff0e6;
+  padding: 10px;
+  border-left: 4px solid #e74c3c;
+}
+
+h1 {
+  font-family: "Geist", sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+.weight-guide {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.weight-box {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  background-color: #e0e0e0;
+  padding: 2px 4px;
+}
+
+.th {
+  font-weight: 300;
+}
+
+.fo {
+  font-weight: 400;
+}
+
+.se {
+  font-weight: 700;
+}
+
+.drop-cap::first-letter {
+  font-size: 3em;
+  float: left;
+  margin-right: 0.1em;
+  margin-top: 0.1em;
+  font-weight: bold;
+  color: #1a5f7a;
+  line-height: 0.8;
+}
+
+.text-shadow {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  color: #2c3e50;
+}
+
+.text-clip {
+  background-image: url("./img.png");
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.variable-font-demo {
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.variable-font-demo.active {
+  font-weight: 700;
+  color: #e74c3c;
+  transform: scale(1.05);
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("https://cdn.vercel.com/fonts/geist/geist-regular.woff2")
+      format("woff2"),
+    url("https://cdn.vercel.com/fonts/geist/geist-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("https://cdn.vercel.com/fonts/geist/geist-bold.woff2")
+      format("woff2"),
+    url("https://cdn.vercel.com/fonts/geist/geist-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.level3 {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+h1,
+h2 {
+  font-family: "Geist", sans-serif;
+  letter-spacing: -0.05em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  color: #1a1a2e;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #4a4a68;
+}
+
+.intro {
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #666;
+}
+
+.code-section {
+  font-family: "Courier New", monospace;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 25px 0;
+  line-height: 1.6;
+}
+
+.spacing-demo {
+  letter-spacing: 0.1em;
+  word-spacing: 0.3em;
+  color: #2c3e50;
+}
+
+.line-height-demo {
+  line-height: 2.5;
+  color: #34495e;
+}

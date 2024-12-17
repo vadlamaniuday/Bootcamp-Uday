@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CSS Zen Garden: The Beauty of CSS Design</title>
+
+    <link rel="stylesheet" media="screen" href="style.css?v=8may2013" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="http://www.csszengarden.com/zengarden.xml"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dave Shea" />
+    <meta
+      name="description"
+      content="A demonstration of what can be accomplished visually through CSS-based design."
+    />
+
+    <link rel="stylesheet" href="solution-2.css" />
+    <meta name="robots" content="all" />
+  </head>
+
+  <body id="css-zen-garden">
+    <div class="page-wrapper">
+      <section class="intro" id="zen-intro">
+        <header role="banner">
+          <h1>CSS Zen Garden</h1>
+          <h2>
+            Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design
+            <span class="zen-icons">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </span>
+          </h2>
+        </header>
+
+        <div class="summary" id="zen-summary" role="article">
+          <p>
+            This page is downloaded from csszengarden. The idea for you is to:
+          </p>
+          <ol>
+            <li>Start from this page.</li>
+            <li>Enhance it progressively, by linking your css to it.</li>
+            <li>Add additional material to the html as well.</li>
+            <div class="warning">
+              Do not play any attention to the text. We are using it merely to
+              illustrate the design concepts.
+            </div>
+          </ol>
+          <p>
+            A demonstration of what can be accomplished through
+            <abbr title="Cascading Style Sheets">CSS</abbr>-based design. Select
+            any style sheet from the list to load it into this page.
+          </p>
+          <p>
+            Download the example
+            <a
+              href="/examples/index"
+              title="This page's source HTML code, not to be modified."
+              >html file</a
+            >
+            and
+            <a
+              href="/examples/style.css"
+              title="This page's sample CSS, the file you may modify."
+              >css file</a
+            >
+          </p>
+        </div>
+
+        <div class="preamble" id="zen-preamble" role="article">
+          <h3>
+            The Road to Enlightenment
+            <span class="zen-icons">
+              <i class="fa-solid fa-hands-praying"></i>
+            </span>
+          </h3>
+          <p>
+            Littering a dark and dreary road lay the past relics of
+            browser-specific tags, incompatible
+            <abbr title="Document Object Model">DOM</abbr>s, broken
+            <abbr title="Cascading Style Sheets">CSS</abbr> support, and
+            abandoned browsers.
+          </p>
+          <p>
+            We must clear the mind of the past. Web enlightenment has been
+            achieved thanks to the tireless efforts of folk like the
+            <abbr title="World Wide Web Consortium">W3C</abbr>,
+            <abbr title="Web Standards Project">WaSP</abbr>, and the major
+            browser creators.
+          </p>
+          <p>
+            The CSS Zen Garden invites you to relax and meditate on the
+            important lessons of the masters. Begin to see with clarity. Learn
+            to use the time-honored techniques in new and invigorating fashion.
+            Become one with the web.
+          </p>
+        </div>
+      </section>
+
+      <div class="main supporting" id="zen-supporting" role="main">
+        <div class="explanation" id="zen-explanation" role="article">
+          <h3>
+            So What is This About?
+            <span class="zen-icons">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                width="20"
+                viewBox="0 0 512 512"
+                fill="currentColor"
+              >
+                <path
+                  d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
+                />
+              </svg>
+            </span>
+          </h3>
+          <p>
+            There is a continuing need to show the power of
+            <abbr title="Cascading Style Sheets">CSS</abbr>. The Zen Garden aims
+            to excite, inspire, and encourage participation. To begin, view some
+            of the existing designs in the list. Clicking on any one will load
+            the style sheet into this very page. The
+            <abbr title="HyperText Markup Language">HTML</abbr> remains the
+            same, the only thing that has changed is the external
+            <abbr title="Cascading Style Sheets">CSS</abbr> file. Yes, really.
+          </p>
+          <p>
+            <abbr title="Cascading Style Sheets">CSS</abbr> allows complete and
+            total control over the style of a hypertext document. The only way
+            this can be illustrated in a way that gets people excited is by
+            demonstrating what it can truly be, once the reins are placed in the
+            hands of those able to create beauty from structure. Designers and
+            coders alike have contributed to the beauty of the web; we can
+            always push it further.
+          </p>
+        </div>
+
+        <div class="participation" id="zen-participation" role="article">
+          <h3>Participation</h3>
+          <p>
+            Strong visual design has always been our focus. You are modifying
+            this page, so strong
+            <abbr title="Cascading Style Sheets">CSS</abbr> skills are necessary
+            too, but the example files are commented well enough that even
+            <abbr title="Cascading Style Sheets">CSS</abbr> novices can use them
+            as starting points. Please see the
+            <a
+              href="/pages/resources/"
+              title="A listing of CSS-related resources"
+              ><abbr title="Cascading Style Sheets">CSS</abbr> Resource Guide</a
+            >
+            for advanced tutorials and tips on working with
+            <abbr title="Cascading Style Sheets">CSS</abbr>.
+          </p>
+          <p>
+            You may modify the style sheet in any way you wish, but not the
+            <abbr title="HyperText Markup Language">HTML</abbr>. This may seem
+            daunting at first if you&#8217;ve never worked this way before, but
+            follow the listed links to learn more, and use the sample files as a
+            guide.
+          </p>
+          <p>
+            Download the sample
+            <a
+              href="/examples/index"
+              title="This page's source HTML code, not to be modified."
+              >HTML</a
+            >
+            and
+            <a
+              href="/examples/style.css"
+              title="This page's sample CSS, the file you may modify."
+              >CSS</a
+            >
+            to work on a copy locally. Once you have completed your masterpiece
+            (and please, don&#8217;t submit half-finished work) upload your
+            <abbr title="Cascading Style Sheets">CSS</abbr> file to a web server
+            under your control.
+            <a
+              href="/pages/submit/"
+              title="Use the contact form to send us your CSS file"
+              >Send us a link</a
+            >
+            to an archive of that file and all associated assets, and if we
+            choose to use it we will download it and place it on our server.
+          </p>
+        </div>
+
+        <div class="benefits" id="zen-benefits" role="article">
+          <h3>Benefits</h3>
+          <p>
+            Why participate? For recognition, inspiration, and a resource we can
+            all refer to showing people how amazing
+            <abbr title="Cascading Style Sheets">CSS</abbr> really can be. This
+            site serves as equal parts inspiration for those working on the web
+            today, learning tool for those who will be tomorrow, and gallery of
+            future techniques we can all look forward to.
+          </p>
+        </div>
+
+        <div class="requirements" id="zen-requirements" role="article">
+          <h3>Requirements</h3>
+          <p>
+            Where possible, we would like to see mostly
+            <abbr title="Cascading Style Sheets, levels 1 and 2"
+              >CSS 1 &amp; 2</abbr
+            >
+            usage.
+            <abbr title="Cascading Style Sheets, levels 3 and 4"
+              >CSS 3 &amp; 4</abbr
+            >
+            should be limited to widely-supported elements only, or strong
+            fallbacks should be provided. The CSS Zen Garden is about
+            functional, practical
+            <abbr title="Cascading Style Sheets">CSS</abbr> and not the latest
+            bleeding-edge tricks viewable by 2% of the browsing public. The only
+            real requirement we have is that your
+            <abbr title="Cascading Style Sheets">CSS</abbr> validates.
+          </p>
+          <p>
+            Luckily, designing this way shows how well various browsers have
+            implemented <abbr title="Cascading Style Sheets">CSS</abbr> by now.
+            When sticking to the guidelines you should see fairly consistent
+            results across most modern browsers. Due to the sheer number of user
+            agents on the web these days &#8212; especially when you factor in
+            mobile &#8212; pixel-perfect layouts may not be possible across
+            every platform. That&#8217;s okay, but do test in as many as you
+            can. Your design should work in at least IE9+ and the latest Chrome,
+            Firefox, iOS and Android browsers (run by over 90% of the
+            population).
+          </p>
+          <p>
+            We ask that you submit original artwork. Please respect copyright
+            laws. Please keep objectionable material to a minimum, and try to
+            incorporate unique and interesting visual themes to your work.
+            We&#8217;re well past the point of needing another garden-related
+            design.
+          </p>
+          <p>
+            This is a learning exercise as well as a demonstration. You retain
+            full copyright on your graphics (with limited exceptions, see
+            <a href="/pages/submit/guidelines/">submission guidelines</a>), but
+            we ask you release your
+            <abbr title="Cascading Style Sheets">CSS</abbr> under a Creative
+            Commons license identical to the
+            <a
+              href="http://creativecommons.org/licenses/by-nc-sa/3.0/"
+              title="View the Zen Garden's license information."
+              >one on this site</a
+            >
+            so that others may learn from your work.
+          </p>
+          <p role="contentinfo">
+            By <a href="http://www.mezzoblue.com/">Dave Shea</a>. Bandwidth
+            graciously donated by
+            <a href="http://www.mediatemple.net/">mediatemple</a>. Now
+            available:
+            <a
+              href="http://www.amazon.com/exec/obidos/ASIN/0321303474/mezzoblue-20/"
+              >Zen Garden, the book</a
+            >.
+          </p>
+        </div>
+
+        <div class="icon-grid">
+          <div class="icon-item">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <p>Magic Wand</p>
+          </div>
+          <div class="icon-item">
+            <i class="fa-solid fa-hands-praying"></i>
+            <p>Praying Hands</p>
+          </div>
+          <div class="icon-item">
+            <i class="fa-solid fa-circle-question"></i>
+            <p>Question Circle</p>
+          </div>
+          <div class="icon-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              height="20px"
+              width="20px"
+              fill="currentColor"
+            >
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+              />
+            </svg>
+            <p>Instagram</p>
+          </div>
+          <div class="icon-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 496 512"
+              height="20px"
+              width="20px"
+              fill="currentColor"
+            >
+              <path
+                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+              />
+            </svg>
+            <p>Github</p>
+          </div>
+          <div class="icon-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 512"
+              height="20px"
+              width="20px"
+              fill="currentColor"
+            >
+              <path
+                d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z"
+              />
+            </svg>
+            <p>Discord</p>
+          </div>
+        </div>
+
+        <footer>
+          <a
+            href="http://validator.w3.org/check/referer"
+            title="Check the validity of this site&#8217;s HTML"
+            class="zen-validate-html"
+            >HTML</a
+          >
+          <a
+            href="http://jigsaw.w3.org/css-validator/check/referer"
+            title="Check the validity of this site&#8217;s CSS"
+            class="zen-validate-css"
+            >CSS</a
+          >
+          <a
+            href="http://creativecommons.org/licenses/by-nc-sa/3.0/"
+            title="View the Creative Commons license of this site: Attribution-NonCommercial-ShareAlike."
+            class="zen-license"
+            >CC</a
+          >
+          <a
+            href="http://mezzoblue.com/zengarden/faq/#aaa"
+            title="Read about the accessibility of this site"
+            class="zen-accessibility"
+            >A11y</a
+          >
+          <a
+            href="https://github.com/mezzoblue/csszengarden.com"
+            title="Fork this site on Github"
+            class="zen-github"
+            >GH</a
+          >
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/4cb27abdab.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

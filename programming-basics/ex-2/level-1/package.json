@@ -1,0 +1,21 @@
+{
+  "name": "ex-2-lvl-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "if not exist node_modules npm install",
+    "start": "node index.js",
+    "dev": "cross-env DEBUG=* nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Vadlamani Uday",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}

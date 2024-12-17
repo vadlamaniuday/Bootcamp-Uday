@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Level 2: Google Fonts & Typography Magic</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:wght@700&family=Fira+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="solution-2.css" />
+  </head>
+  <body>
+    <div class="instructions">
+      <p>
+        Level 2: Use Google Fonts to apply three (sans-serif for text, serif for
+        headings, monospace for code).
+      </p>
+      <p>Choose a set of Google Fonts.</p>
+      <p>Check how variable fonts work. Illustrate it in your page.</p>
+      <p>
+        Update the text to tell us what you are doing so that we know what to
+        look for.
+      </p>
+      <p>
+        Show what you can do with text: Drop cap, shadow, and large headings
+        where image shows only through the text.
+      </p>
+    </div>
+
+    <div class="container">
+      <h1>Typography: Beyond Simple Text</h1>
+
+      <h2>The Magic of the Drop Cap</h2>
+      <p class="drop-cap">
+        Typography is an art form that transforms mere words into visual poetry.
+        A drop cap, the enlarged first letter of a paragraph, creates an
+        immediate visual anchor, drawing the reader's eye and adding a touch of
+        elegance to the text. This technique, rooted in medieval manuscript
+        design, continues to captivate readers in modern digital typography.
+      </p>
+
+      <h2>Text Shadows: Adding Depth and Dimension</h2>
+      <p class="text-shadow">
+        Shadows are not just for images—they can breathe life into text itself.
+        By carefully applying text shadows, we can create depth, add drama, and
+        make words leap off the page. The subtle interplay of light and shadow
+        transforms flat text into a three-dimensional typographic experience.
+      </p>
+
+      <h2>Image Masking: Text as a Window</h2>
+      <div class="text-clip">Typography Magic</div>
+      <p>
+        In this technique, an image is revealed only through the shapes of
+        letters. The text becomes a unique window, allowing the background image
+        to peek through its letterforms. This creates a dynamic, interactive
+        visual experience that blurs the line between text and imagery.
+      </p>
+
+      <h2>Variable Fonts: Dynamic Typography</h2>
+      <p>
+        <span class="variable-font-demo" onclick="toggleVariableFont(this)">
+          Click to transform: Explore the magic of dynamic typography
+        </span>
+      </p>
+
+      <h2>Font Family Showcase</h2>
+      <ul>
+        <li style="font-family: 'Roboto'">
+          Sans-serif body text: Roboto - Clean and modern
+        </li>
+        <li style="font-family: 'Merriweather'">
+          Serif headings: Merriweather - Traditional and elegant
+        </li>
+        <li style="font-family: 'Fira Mono'">
+          Monospace code: Fira Mono - Precise and technical
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleVariableFont(element) {
+        element.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

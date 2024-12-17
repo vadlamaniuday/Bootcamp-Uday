@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="solution-1-2.css" />
+    <title>Level 2 : Solution 1 Part 2</title>
+  </head>
+  <body>
+    <p
+      style="
+        background-color: rgb(213, 208, 208);
+        padding: 20px 20px;
+        border-radius: 10px;
+      "
+    >
+      Create a second version of the page using a complementary color scheme.
+      <br />
+      Add clear contrast between elements.
+    </p>
+
+    <h1>Exercise 2: Basics of Colors</h1>
+
+    <div class="weight-guide">
+      <div class="weight-box th">
+        <h3>Light Weight (300)</h3>
+        <p>Thin, delicate text</p>
+      </div>
+      <div class="weight-box fo">
+        <h3>Normal Weight (400)</h3>
+        <p>Standard body text</p>
+      </div>
+      <div class="weight-box se">
+        <h3>Bold Weight (700)</h3>
+        <p>Strong, emphasized text</p>
+      </div>
+    </div>
+
+    <h2>Font Weight Exploration</h2>
+
+    <p class="light-text">
+      <strong>Light Weight (300):</strong> This text demonstrates the lightest
+      font weight available in Arial. Notice how it appears thinner and more
+      delicate. Light weights are excellent for minimal designs, subtle
+      information, or when you want to create a sense of elegance and airiness.
+      It's particularly effective for supporting text or when you want to reduce
+      visual noise.
+    </p>
+
+    <p class="normal-text">
+      <strong>Normal Weight (400):</strong> This is the standard font weight
+      used in most body text. It strikes a perfect balance between readability
+      and visual clarity. Normal weight ensures that text is neither too thin to
+      strain the eyes nor too bold to appear aggressive. Most paragraphs,
+      articles, and standard content use this weight as their default.
+    </p>
+
+    <p class="bold-text">
+      <strong>Bold Weight (700):</strong> Bold text commands attention and
+      emphasis. When you want to highlight key information, draw the reader's
+      eye, or create a strong visual hierarchy, bold weight is your go-to
+      choice. It makes text appear more substantial and powerful, perfect for
+      headings, important statements, or areas requiring immediate focus.
+    </p>
+
+    <h2>Understanding Font Weights</h2>
+    <p>
+      Font weights range from thin (100) to extra bold (900). The three primary
+      weights we're exploring today are:
+    </p>
+    <ul>
+      <li class="th">300 (Light): Delicate and minimal</li>
+      <li class="fo">400 (Normal): Standard readability</li>
+      <li class="se">700 (Bold): Strong emphasis</li>
+    </ul>
+
+    <h2>JavaScript Snippet: Weight Exploration</h2>
+    <pre><code>
+// Demonstrating font weight characteristics
+function exploreFontWeights() {
+    const weights = [
+        { value: 300, description: 'Light - Delicate text' },
+        { value: 400, description: 'Normal - Standard text' },
+        { value: 700, description: 'Bold - Emphasized text' }
+    ];
+    
+    weights.forEach(weight => {
+        console.log(`Font Weight: ${weight.value} - ${weight.description}`);
+    });
+}
+
+exploreFontWeights();
+    </code></pre>
+
+    <h1>Typography: Beyond Simple Text</h1>
+
+    <h2>The Magic of the Drop Cap</h2>
+    <p class="drop-cap">
+      Typography is an art form that transforms mere words into visual poetry. A
+      drop cap, the enlarged first letter of a paragraph, creates an immediate
+      visual anchor, drawing the reader's eye and adding a touch of elegance to
+      the text. This technique, rooted in medieval manuscript design, continues
+      to captivate readers in modern digital typography.
+    </p>
+
+    <h2>Text Shadows: Adding Depth and Dimension</h2>
+    <p class="text-shadow">
+      Shadows are not just for images—they can breathe life into text itself. By
+      carefully applying text shadows, we can create depth, add drama, and make
+      words leap off the page. The subtle interplay of light and shadow
+      transforms flat text into a three-dimensional typographic experience.
+    </p>
+
+    <h2>Image Masking: Text as a Window</h2>
+    <div class="text-clip">Typography Magic</div>
+    <p>
+      In this technique, an image is revealed only through the shapes of
+      letters. The text becomes a unique window, allowing the background image
+      to peek through its letterforms. This creates a dynamic, interactive
+      visual experience that blurs the line between text and imagery.
+    </p>
+
+    <h2>Variable Fonts: Dynamic Typography</h2>
+    <p>
+      <span class="variable-font-demo" onclick="toggleVariableFont(this)">
+        Click to transform: Explore the magic of dynamic typography
+      </span>
+    </p>
+
+    <h2>Font Family Showcase</h2>
+    <ul>
+      <li style="font-family: 'Roboto'">
+        Sans-serif body text: Roboto - Clean and modern
+      </li>
+      <li style="font-family: Arial, Helvetica, sans-serif">
+        Serif headings: Merriweather - Traditional and elegant
+      </li>
+      <li>Monospace code: Fira Mono - Precise and technical</li>
+    </ul>
+
+    <script>
+      function toggleVariableFont(element) {
+        element.classList.toggle("active");
+      }
+    </script>
+
+    <div class="level3">
+      <h1>The Intricate World of Typography</h1>
+
+      <p class="intro">
+        Typography is more than just selecting fonts—it's about creating a
+        visual language that communicates beyond words. Each font, each spacing
+        adjustment, tells a story of design, readability, and aesthetic
+        intention.
+      </p>
+
+      <h2>Font Family Dialogue</h2>
+      <p>
+        In this exploration, we've paired Geist from Vercel—a modern, clean
+        typeface—with Open Sans, a highly readable sans-serif font. This
+        combination demonstrates how different font families can work together
+        to create a harmonious and engaging typographic landscape.
+      </p>
+
+      <h2>The Symphony of Letter Spacing</h2>
+      <p class="spacing-demo">
+        Letter spacing transforms text from a mere communication tool to a
+        visual art form. By expanding or condensing the space between letters
+        and words, we can create rhythm, emphasis, and emotional resonance in
+        our typography.
+      </p>
+
+      <h2>Breathing Room: Line Height Exploration</h2>
+      <p class="line-height-demo">
+        Line height is the unsung hero of readability. Too compact, and text
+        feels claustrophobic; too expansive, and it loses connection. The right
+        line height creates a rhythmic flow, guiding the reader's eye and making
+        long-form content a pleasure to consume.
+      </p>
+
+      <h2>Code as Typography</h2>
+      <div class="code-section">
+        // Typography is a code of visual communication function
+        exploreTypographicPossibilities() { const fonts = ['Geist', 'Open Sans',
+        'Courier']; const principles = [ 'Readability', 'Hierarchy', 'Emotional
+        Resonance' ]; principles.forEach(principle => { console.log(`Exploring
+        typographic principle: ${principle}`); }); }
+      </div>
+    </div>
+
+    <div class="color-theory-card">
+      <h2>🎨 CSS Color Theory: Rules and Best Practices</h2>
+
+      <div class="color-rule">
+        <h3>1. Color Accessibility</h3>
+        <p>
+          Ensure sufficient color contrast to maintain readability. Use tools
+          like WCAG contrast checkers to verify your color combinations meet
+          accessibility standards.
+        </p>
+        <div class="color-code">
+          /* Good Practice */ .text { color: #333; background-color: #fff; }
+        </div>
+      </div>
+
+      <div class="color-rule">
+        <h3>2. Semantic Color Usage</h3>
+        <p>
+          Utilize CSS custom properties (variables) to create a consistent color
+          system. This allows for easy theme management and global color
+          updates.
+        </p>
+        <div class="color-code">
+          :root { --primary-color: #3498db; --success-color: #2ecc71;
+          --danger-color: #e74c3c; }
+        </div>
+      </div>
+
+      <div class="color-rule">
+        <h3>3. Color Transparency and Alpha Channels</h3>
+        <p>
+          Leverage rgba() and hsla() for nuanced color interactions. Use alpha
+          channels to create depth, overlay effects, and subtle variations.
+        </p>
+        <div class="color-code">
+          .overlay { background-color: rgba(52, 152, 219, 0.5); }
+        </div>
+      </div>
+
+      <div class="color-rule">
+        <h3>4. Color Theming with CSS Variables</h3>
+        <p>
+          Create dynamic, adaptable color themes using CSS custom properties.
+          This enables easy dark mode implementation and color scheme switching.
+        </p>
+        <div class="color-code">
+          @media (prefers-color-scheme: dark) { :root { --bg-color: #121212;
+          --text-color: #ffffff; } }
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

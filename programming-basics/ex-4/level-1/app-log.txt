@@ -1,0 +1,14 @@
+[32m 2024-12-17T07:23:05.494Z info: Starting the application...[39m
+[32m 2024-12-17T07:23:05.498Z info: [32mOperation completed successfully.[39m[32m[39m
+[32m 2024-12-17T07:23:21.098Z info: Starting the application...[39m
+[32m 2024-12-17T07:23:21.102Z info: [32mOperation completed successfully.[39m[32m[39m
+[32m 2024-12-17T07:23:23.933Z info: Starting the application...[39m
+[31m 2024-12-17T07:23:23.936Z error: Cannot divide 10, 0 - Division by zero[39m
+[31m 2024-12-17T07:23:23.936Z error: [31mOperation failed due to an error[39m[31m[39m
+[32m 2024-12-17T07:24:23.980Z info: Starting the application...[39m
+[32m 2024-12-17T07:24:23.983Z info: [32mOperation completed successfully.[39m[32m[39m
+[32m 2024-12-17T07:24:33.112Z info: Starting the application...[39m
+[32m 2024-12-17T07:24:33.115Z info: [32mOperation completed successfully.[39m[32m[39m
+[32m 2024-12-17T07:24:41.440Z info: Starting the application...[39m
+[31m 2024-12-17T07:24:41.444Z error: Cannot divide 10, 0 - Division by zero[39m
+[31m 2024-12-17T07:24:41.444Z error: [31mOperation failed due to an error[39m[31m[39m

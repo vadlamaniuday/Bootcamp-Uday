@@ -1,0 +1,16 @@
+{
+  "name": "ex-1-lvl-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "cross-env DEBUG=* node index.js"
+  },
+  "keywords": [],
+  "author": "Vadlamani Uday",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

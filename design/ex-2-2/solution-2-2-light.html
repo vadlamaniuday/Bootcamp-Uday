@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Theme Overlay</title>
+    <style>
+      :root {
+    --overlay-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    --text-color: #ffffff; /* White text */
+}
+
+body {
+  padding: 50px 50px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #2c2c2c;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlay-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-text {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="img.jpg" alt="Example">
+        <div class="overlay">
+            <div class="overlay-text">This is overlaid text</div>
+        </div>
+    </div>
+</body>
+</html>
