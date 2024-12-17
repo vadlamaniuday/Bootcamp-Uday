@@ -4,3 +4,10 @@
 [32m 2024-12-17T08:33:00.473Z info: [32mOperation completed successfully.[39m[32m[39m
 [32m 2024-12-17T08:33:05.838Z info: Starting the application...[39m
 [32m 2024-12-17T08:33:05.843Z info: [32mOperation completed successfully.[39m[32m[39m
+[32m 2024-12-17T14:57:24.781Z info: Starting the application...[39m
+[32m 2024-12-17T14:57:24.786Z info: [32mOperation completed successfully.[39m[32m[39m
+[32m 2024-12-17T14:57:34.643Z info: Starting the application...[39m
+[32m 2024-12-17T14:57:34.647Z info: [32mOperation completed successfully.[39m[32m[39m
+[32m 2024-12-17T14:57:39.597Z info: Starting the application...[39m
+[31m 2024-12-17T14:57:39.601Z error: Cannot divide 0, 20 - Division by zero[39m
+[31m 2024-12-17T14:57:39.602Z error: [31mOperation failed due to an error[39m[31m[39m

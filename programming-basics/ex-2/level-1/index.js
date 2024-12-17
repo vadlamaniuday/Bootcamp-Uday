@@ -3,7 +3,7 @@ const args = process.argv.slice(2);
 try {
   if (args.length === 0) {
     throw new Error(
-      "No numbers provided. Usage: node sum.js <num1> <num2> ..."
+      "No numbers provided. Usage: node index.js <num1> <num2> ..."
     );
   }
 
