@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://classless.de/classless.css" />
+    <title>Basic Capstone</title>
+  </head>
+  <body>
+    <header>
+      <h1>Notes - Basic Capstone</h1>
+      <h5>LLMs Used : Yes</h5>
+      <a
+        href="https://chatgpt.com/share/6763dae2-0680-8005-8e16-11053d2cf922"
+        target="_blank"
+        >Link 1</a
+      >
+      <a
+        href="https://www.perplexity.ai/search/i-have-a-vanilla-vite-project-D_eEQE9jR06HravucMFz0A"
+        target="_blank"
+        >Link 2</a
+      >
+      <a
+        href="https://chatgpt.com/share/6763db23-94ac-8005-8f9f-57a7537f468a"
+        target="_blank"
+        >Link 3</a
+      >
+    </header>
+
+    <main>
+      <div class="overview">
+        <h3 style="text-align: center">Abstract</h3>
+        <p>
+          In this exercise, I had to create a capstone project where I had to
+          retrieve 1000 tables of data, and on that data, I had to perform
+          filtering operations. The handicap on this was, we have to use Vanilla
+          JS/TS on this. This was an easy task given that we were allowed to use
+          Vite for building and such.
+        </p>
+      </div>
+      <hr />
+      <div class="approach">
+        <h3 style="text-align: center">Approach</h3>
+        <p>The approach I took was :</p>
+        <ol>
+          <li>
+            <strong>Getting the Data</strong>
+            <ol>
+              <li>
+                I got the data from a kaggle dataset
+                <a
+                  href="https://www.kaggle.com/datasets/nechbamohammed/research-papers-dataset"
+                  target="_blank"
+                  >(link)</a
+                >
+              </li>
+              <li>
+                I cleaned the csv file from a Python (Specifically pandas)
+                script which takes the top 1000 rows in the dataset and converts
+                and stores the converted data inside a JSON file.
+              </li>
+            </ol>
+          </li>
+          <li>
+            I then used the data for building the functionality and the UI
+            around it.
+          </li>
+        </ol>
+      </div>
+      <hr />
+      <div class="resources">
+        <h3 style="text-align: center">Resources I used</h3>
+        <p>
+          A lot of resources (mainly for config) came in handy here including
+          but not limited to :
+        </p>
+        <ol>
+          <li>LLMs</li>
+          <li>Kaggle</li>
+        </ol>
+      </div>
+      <hr />
+      <div class="improvements">
+        <h3 style="text-align: center">Improvements</h3>
+        <p>
+          I believe that there's a room for improvement around debouncing and
+          the time taken to load the table.
+        </p>
+      </div>
+    </main>
+    <section></section>
+
+    <section>
+      <h3>Images</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Level 1</td>
+            <td><img src="./level-1/image.png" alt="Level 1" /></td>
+          </tr>
+          <tr>
+            <td>Level 2</td>
+            <td><img src="./level-2/image.png" alt="Level 2" /></td>
+          </tr>
+          <tr>
+            <td>Level 3</td>
+            <td><img src="./level-3/image.png" alt="Level 3" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>

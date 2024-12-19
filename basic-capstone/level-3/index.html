@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Capstone - Level 3</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Capstone Project - Research Papers</h1>
+      <div id="filter-container">
+        <div class="filter-item">
+          <label for="title-filter">Title:</label>
+          <input
+            type="text"
+            id="title-filter"
+            placeholder="Filter by Title..."
+          />
+        </div>
+        <div class="filter-item">
+          <label for="min-citations">Min Citations:</label>
+          <input type="number" id="min-citations" placeholder="Min Citations" />
+        </div>
+        <div class="filter-item">
+          <label for="start-year">Start Year:</label>
+          <input type="number" id="start-year" placeholder="Start Year" />
+        </div>
+        <div class="filter-item">
+          <label for="end-year">End Year:</label>
+          <input type="number" id="end-year" placeholder="End Year" />
+        </div>
+        <button id="clear-filters">Clear All Filters</button>
+      </div>
+      <div id="pagination-container">
+        <label for="rows-per-page">Rows per page:</label>
+        <select id="rows-per-page">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50" selected>50</option>
+          <option value="100">100</option>
+        </select>
+        <button id="prev-page" disabled>Previous</button>
+        <button id="next-page">Next</button>
+        <span id="page-info"></span>
+      </div>
+      <button id="export">Export Filtered Data</button>
+      <div id="paper-list"></div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
