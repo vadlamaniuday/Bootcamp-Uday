@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Table Styling</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <style>
+      .article-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .article-meta {
+        color: #666;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .article-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .controls-container {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .control-group {
+        flex: 1;
+      }
+      .slider-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .table-controls {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Dynamic Table Styling</h1>
+        <div class="top-controls">
+          <div class="controls-container">
+            <div class="control-group">
+              <h2>Background Color</h2>
+              <input type="color" id="bgColorPicker" value="#f0f0f0" />
+              <div class="slider-row">
+                <label for="bgHue">Hue</label>
+                <input type="range" id="bgHue" min="0" max="360" value="0" />
+                <label for="bgSaturation">Saturation</label>
+                <input
+                  type="range"
+                  id="bgSaturation"
+                  min="0"
+                  max="100"
+                  value="100"
+                />
+                <label for="bgLightness">Lightness</label>
+                <input
+                  type="range"
+                  id="bgLightness"
+                  min="0"
+                  max="100"
+                  value="50"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <article>
+          <div class="article-header">
+            <h1>
+              Tesla is having major issue with its self-driving computer inside
+              new cars
+            </h1>
+          </div>
+          <div class="article-meta">
+            <p>Published on December 18, 2024 | By Vadlamani Uday</p>
+          </div>
+          <img
+            src="https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2023/02/Tesla-Hardware-4-self-driving-computer.jpg?w=1500&quality=82&strip=all&ssl=1"
+            alt="Tesla Chip"
+            class="article-image"
+          />
+
+          <p>
+            Brand-new Tesla vehicles are experiencing self-driving computer
+            failures, which are resulting in significant problems. Inside
+            sources say that the problem is contributing to overwhelming Tesla's
+            service.
+            <br />
+            <br />
+            Over the last few weeks, Electrek has received several reports from
+            new Tesla buyers claiming computer failures on brand-new cars.
+          </p>
+
+          <p>
+            The problem is linked to a new version of Tesla’s HW4 (sometimes
+            called AI4) onboard self-driving computer. Internally, some refer to
+            the new version as AI4.1. The computers are short-circuiting. The
+            cause is still being investigated, but one source told Electrek that
+            one of the possible causes is the low-voltage battery
+            short-circuiting the computer during the camera calibration process.
+            <br />
+            <br />
+          </p>
+
+          <p>
+            Tesla drivers are reporting computer failures after driving off with
+            their brand-new cars over just the first few tens to hundreds of
+            miles. Wide-ranging features powered by the computer, like active
+            safety features, cameras, and even GPS, navigation, and range
+            estimations, fail to work.
+          </p>
+
+          <h2>My Take</h2>
+          <p>
+            I am not hating here. This is a significant issue that customers
+            should be aware of. It is significant enough that several inside
+            sources decided to reach out about it, and many customers are
+            complaining about the issue.
+          </p>
+          <p>
+            I would expect NHTSA to issue a recall here, and Tesla could be in
+            trouble for downplaying an issue that has been going on for weeks,
+            but I don’t think that’s going to happen considering what the Trump
+            transition team, in which Tesla CEO Elon Musk is greatly involved,
+            is signaling to the federal agency.
+          </p>
+        </article>
+
+        <div class="table-controls">
+          <h2>Table Color</h2>
+          <input type="color" id="tableColorPicker" value="#ffffff" />
+          <div class="slider-row">
+            <label for="tableHue">Hue</label>
+            <input type="range" id="tableHue" min="0" max="360" value="0" />
+            <label for="tableSaturation">Saturation</label>
+            <input
+              type="range"
+              id="tableSaturation"
+              min="0"
+              max="100"
+              value="100"
+            />
+            <label for="tableLightness">Lightness</label>
+            <input
+              type="range"
+              id="tableLightness"
+              min="0"
+              max="100"
+              value="50"
+            />
+          </div>
+        </div>
+
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th>Brand</th>
+              <th>Model</th>
+              <th>Price (INR)</th>
+              <th>Release Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Xiaomi</td>
+              <td>Redmi Note 11</td>
+              <td>13,999</td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>Samsung</td>
+              <td>Galaxy S22</td>
+              <td>72,999</td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>Apple</td>
+              <td>iPhone 14</td>
+              <td>79,900</td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>OnePlus</td>
+              <td>10 Pro</td>
+              <td>66,999</td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>Xiaomi</td>
+              <td>Mi 11X</td>
+              <td>29,999</td>
+              <td>2022</td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>

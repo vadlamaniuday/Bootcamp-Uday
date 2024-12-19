@@ -1,0 +1,17 @@
+[
+  { "id": 1, "name": "John Doe", "age": 18, "grade": "A" },
+  { "id": 2, "name": "Jane Smith", "age": 19, "grade": "B" },
+  { "id": 3, "name": "Michael Johnson", "age": 17, "grade": "A-" },
+  { "id": 4, "name": "Emily Williams", "age": 20, "grade": "A" },
+  { "id": 5, "name": "David Brown", "age": 18, "grade": "B+" },
+  { "id": 6, "name": "Sarah Miller", "age": 19, "grade": "A-" },
+  { "id": 7, "name": "Robert Taylor", "age": 17, "grade": "B" },
+  { "id": 8, "name": "Emma Davis", "age": 20, "grade": "A+" },
+  { "id": 9, "name": "Christopher Wilson", "age": 18, "grade": "B-" },
+  { "id": 10, "name": "Olivia Martinez", "age": 19, "grade": "A" },
+  { "id": 11, "name": "Daniel Anderson", "age": 17, "grade": "B+" },
+  { "id": 12, "name": "Sophia Thompson", "age": 20, "grade": "A-" },
+  { "id": 13, "name": "Kevin Garcia", "age": 18, "grade": "C+" },
+  { "id": 14, "name": "Isabella Rodriguez", "age": 19, "grade": "B" },
+  { "id": 15, "name": "Ryan Lee", "age": 17, "grade": "A" }
+]

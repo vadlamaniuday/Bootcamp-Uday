@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front End Programming : Exercise 1 Level 1</title>
+    <style>
+      body {
+        font-family: "Varela Round", sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #333;
+      }
+
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #0b192c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      button:hover {
+        background-color: #1e3e62;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #fff;
+      }
+
+      th,
+      td {
+        border: 1px solid #e0e0e0;
+        padding: 15px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #001a6e;
+        color: white;
+        font-weight: 600;
+      }
+
+      .highlight {
+        background-color: #bcccdc;
+        color: #333;
+        border: 2px solid #9aa6b2;
+      }
+
+      .font-button {
+        margin-top: 20px;
+      }
+
+      #browserInfo {
+        margin-top: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      #browserInfo p {
+        margin: 10px 0;
+        font-size: 14px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="addStudent()">Add Student</button>
+    <button class="font-button" onclick="changeFont()">Change Font</button>
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="browserInfo"></div>
+
+    <script>
+      let studentId = 1;
+
+      function addStudent() {
+        const table = document
+          .getElementById("studentTable")
+          .getElementsByTagName("tbody")[0];
+        const newRow = table.insertRow();
+        newRow.classList.add("highlight");
+
+        const cell1 = newRow.insertCell(0);
+        const cell2 = newRow.insertCell(1);
+        const cell3 = newRow.insertCell(2);
+        const cell4 = newRow.insertCell(3);
+
+        cell1.innerHTML = studentId;
+        cell2.innerHTML = "John Doe";
+        cell3.innerHTML = "18";
+        cell4.innerHTML = "A";
+
+        studentId++;
+      }
+
+      function changeFont() {
+        const link = document.createElement("link");
+        link.href =
+          "https://fonts.googleapis.com/css2?family=Varela+Round&display=swap";
+        link.rel = "stylesheet";
+        document.head.appendChild(link);
+
+        const table = document.getElementById("studentTable");
+        table.style.fontFamily = '"Varela Round", sans-serif';
+      }
+
+      function displayBrowserInfo() {
+        const browserInfoDiv = document.getElementById("browserInfo");
+        const userAgent = navigator.userAgent;
+        let browserName = "Unknown";
+        let browserVersion = "Unknown";
+
+        if (userAgent.includes("Firefox/")) {
+          browserName = "Firefox";
+          browserVersion = userAgent.split("Firefox/")[1].split(" ")[0];
+        } else if (userAgent.includes("Edg/")) {
+          browserName = "Edge";
+          browserVersion = userAgent.split("Edg/")[1].split(" ")[0];
+        } else if (userAgent.includes("Chrome/")) {
+          browserName = "Chrome";
+          browserVersion = userAgent.split("Chrome/")[1].split(" ")[0];
+        } else if (
+          userAgent.includes("Safari/") &&
+          userAgent.includes("Version/")
+        ) {
+          browserName = "Safari";
+          browserVersion = userAgent.split("Version/")[1].split(" ")[0];
+        }
+
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        browserInfoDiv.innerHTML = `
+                <p>Browser Name: ${browserName}</p>
+                <p>Browser Version: ${browserVersion}</p>
+                <p>Window Width: ${windowWidth}</p>
+                <p>Window Height: ${windowHeight}</p>
+                <p>User Agent String: ${userAgent}</p>
+            `;
+      }
+
+      displayBrowserInfo();
+    </script>
+  </body>
+</html>

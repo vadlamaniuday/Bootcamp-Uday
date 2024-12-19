@@ -1,0 +1,26 @@
+{
+  "name": "level-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "start": "npm run dev"
+  },
+  "keywords": [],
+  "author": "Vadlamani Uday Kumar",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "dependencies": {
+    "@types/papaparse": "^5.3.15",
+    "papaparse": "^5.4.1"
+  }
+}
