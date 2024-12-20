@@ -1,4 +1,3 @@
-// main.js
 import { fetchData } from "./fetchData.js";
 import { exportFilteredData } from "./handleExport.js";
 import { applyFilters, clearFilters } from "./handleFilter.js";
@@ -11,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   let filteredPapers = papers;
   let currentPage = 1;
-  let rowsPerPage = 50;
+  let rowsPerPage = 20;
 
   const titleFilter = document.getElementById("title-filter");
   const minCitations = document.getElementById("min-citations");
@@ -24,6 +23,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   const nextPageButton = document.getElementById("next-page");
   const pageInfo = document.getElementById("page-info");
   const paperList = document.getElementById("paper-list");
+  const themeToggleButton = document.getElementById("theme-toggle");
+  const htmlElement = document.documentElement;
+
+  themeToggleButton.addEventListener("click", () => {
+    if (htmlElement.classList.contains("light-mode")) {
+      htmlElement.classList.remove("light-mode");
+      themeToggleButton.textContent = "Switch to Light Mode";
+    } else {
+      htmlElement.classList.add("light-mode");
+      themeToggleButton.textContent = "Switch to Dark Mode";
+    }
+  });
 
   const applyFiltersDebounced = debounce(() => {
     filteredPapers = applyFilters(
@@ -43,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       prevPageButton,
       nextPageButton
     );
-  }, 300); // Debounce delay of 300ms
+  }, 300);
 
   titleFilter.addEventListener("input", applyFiltersDebounced);
   minCitations.addEventListener("input", applyFiltersDebounced);

@@ -2,13 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <title>Basic Capstone - Level 3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>YResearcher</title>
   </head>
   <body>
     <div class="container">
-      <h1>Capstone Project - Research Papers</h1>
+      <div class="card header-card">
+        <h1>YResearcher - A Collection of Research Papers</h1>
+        <button id="theme-toggle" class="theme-toggle">
+          Switch to Dark Mode
+        </button>
+      </div>
+
       <div id="filter-container">
         <div class="filter-item">
           <label for="title-filter">Title:</label>
@@ -36,8 +47,8 @@
         <label for="rows-per-page">Rows per page:</label>
         <select id="rows-per-page">
           <option value="10">10</option>
-          <option value="20">20</option>
-          <option value="50" selected>50</option>
+          <option value="20" selected>20</option>
+          <option value="50">50</option>
           <option value="100">100</option>
         </select>
         <button id="prev-page" disabled>Previous</button>
@@ -47,6 +58,28 @@
       <button id="export">Export Filtered Data</button>
       <div id="paper-list"></div>
     </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>Vadlamani Uday</p>
+        <div class="icons">
+          <a href="https://github.com/vadlamaniuday" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/vadlamani-uday-095755208/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://peerlist.io/udayvadlamani" target="_blank"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+          <a href="https://dev.to/noobesh98" target="_blank"
+            ><i class="fa-brands fa-dev"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
     <script type="module" src="src/main.js"></script>
   </body>
 </html>

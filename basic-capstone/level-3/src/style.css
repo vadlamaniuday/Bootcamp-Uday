@@ -24,6 +24,14 @@
   }
 }
 
+.light-mode {
+  --background: #f8fafc;
+  --card-bg: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --input-border-color: #e5e7eb;
+}
+
 body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   margin: 0;
@@ -32,12 +40,14 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
 }
 
 .container {
+  border: 2px solid var(--primary-color);
+  animation: fadeIn 0.5s ease-in-out;
   max-width: 1000px;
   width: 100%;
   margin: 32px auto;
@@ -47,7 +57,14 @@ body {
   border-radius: 16px;
   transition: var(--transition);
 }
-
+.header-card {
+  padding: 16px;
+  margin-bottom: 24px;
+  background-color: var(--card-bg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
 h1 {
   color: var(--text-primary);
   font-size: clamp(1.875rem, 5vw, 2.25rem);
@@ -152,6 +169,28 @@ h1 {
   line-height: 1.4;
 }
 
+.theme-toggle {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 16px;
+  align-self: flex-end;
+}
+
+.theme-toggle:hover {
+  background-color: var(--button-hover-bg);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+}
+
 .details {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -200,6 +239,7 @@ h1 {
   gap: 16px;
   margin-bottom: 24px;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 #pagination-container label {
@@ -242,6 +282,38 @@ h1 {
 #page-info {
   font-weight: 600;
   color: var(--text-secondary);
+}
+
+footer {
+  background-color: var(--card-bg);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 -1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  color: var(--text-secondary);
+}
+
+.icons a {
+  margin: 0 10px;
+  color: var(--text-primary);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
