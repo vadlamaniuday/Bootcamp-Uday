@@ -8,7 +8,9 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const API_KEY = `${import.meta.env.VITE_APP_OPENWEATHERMAP_API_KEY}`;
+  const API_KEY = import.meta.env.VITE_OPENWEATHERMAP_API_KEY;
+  // console.log("API Key from environment:", API_KEY);
+
   const fetchWeather = async (city) => {
     try {
       setLoading(true);
