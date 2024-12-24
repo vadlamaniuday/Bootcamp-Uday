@@ -78,7 +78,9 @@ export default function App() {
       {/* Navigation */}
       <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          <h1 className="text-xl font-bold text-gray-800">Serverless Store</h1>
+          <h1 className="text-xl font-bold text-gray-800">
+            Noobesh Shopping Store
+          </h1>
           <div className="flex items-center space-x-4">
             <div className="relative">
               <Search
