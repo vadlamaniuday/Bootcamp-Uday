@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col items-center py-8 px-4">
       <h1 className="text-4xl font-bold text-white mb-8">
-        Weather App Redesign
+        Weather App (Vite+React)
       </h1>
       <SearchBar onSearch={fetchWeather} />
 
