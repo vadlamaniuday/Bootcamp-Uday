@@ -8,7 +8,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const API_KEY = import.meta.env.VITE_OPENWEATHERMAP_API_KEY;
+  const API_KEY = import.meta.env.VITE_WEATHERMAP_API_KEY;
 
   const fetchWeather = async (city) => {
     try {
@@ -28,9 +28,7 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col items-center py-8 px-4">
-      <h1 className="text-4xl font-bold text-white mb-8">
-        Weather App Redesign
-      </h1>
+      <h1 className="text-4xl font-bold text-white mb-8">Weather App</h1>
       <SearchBar onSearch={fetchWeather} />
 
       {loading && <div className="text-white mt-8">Loading...</div>}
