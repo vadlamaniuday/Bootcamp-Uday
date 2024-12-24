@@ -8,30 +8,27 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Comfortaa:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="header">
         <h1>Vadlamani Uday</h1>
-        <span
-          ><a
-            href="https://github.com/vadlamaniuday/Bootcamp-Uday"
-            target="_blank"
-            style="text-decoration: none; font-size: large"
-            >Access Github Here</a
-          ></span
+        <a
+          href="https://github.com/vadlamaniuday/Bootcamp-Uday"
+          target="_blank"
+          class="github-link"
         >
+          Access Github Here
+        </a>
         <h1>See solutions here</h1>
       </div>
       <div class="grid">
         <a href="html-css/htmlcss-index.html" class="card-container">
           <div class="card">
             <h2>HTML-CSS</h2>
-
-            <div class="flex">
-              <span>See HTML-CSS Index Here</span>
-            </div>
+            <span>See HTML-CSS Index Here</span>
           </div>
         </a>
         <a href="design/design-index.html" class="card-container">
@@ -79,10 +76,7 @@
             <span>A basic capstone project using Vanilla HTML/CSS/JS</span>
           </div>
         </a>
-        <a
-          href="capstone-design-review/capstone-design-review-index.html"
-          class="card-container"
-        >
+        <a href="capstone-design-review/index.html" class="card-container">
           <div class="card">
             <h2>Capstone Project Review</h2>
             <span>A review of Capstone Project of my own and my peers</span>
@@ -90,5 +84,47 @@
         </a>
       </div>
     </div>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-name">Vadlamani Uday</div>
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/vadlamani-uday-095755208/"
+            target="_blank"
+            class="social-link"
+          >
+            <i data-feather="linkedin"></i>
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/vadlamaniuday"
+            target="_blank"
+            class="social-link"
+          >
+            <i data-feather="github"></i>
+            GitHub
+          </a>
+          <a
+            href="https://dev.to/noobesh98"
+            target="_blank"
+            class="social-link"
+          >
+            <i data-feather="code"></i>
+            Dev.to
+          </a>
+          <a
+            href="https://x.com/EkPaavDhaniya"
+            target="_blank"
+            class="social-link"
+          >
+            <i data-feather="twitter"></i>
+            Twitter
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

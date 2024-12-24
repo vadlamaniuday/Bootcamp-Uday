@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serverless E-commerce Platform Design Document</title>
+    <link rel="stylesheet" href="https://classless.de/classless.css" />
+    <!-- <style>
+      :root {
+        --primary-color: #2563eb;
+        --text-color: #1f2937;
+        --bg-color: #ffffff;
+        --secondary-bg: #f3f4f6;
+        --border-color: #e5e7eb;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background: var(--bg-color);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--primary-color);
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        color: var(--text-color);
+        margin: 2rem 0 1rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        color: var(--text-color);
+        margin: 1.5rem 0 0.75rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      ul,
+      ol {
+        margin: 1rem 0;
+        padding-left: 2rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+
+      .section {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: var(--secondary-bg);
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+      }
+
+      .highlight {
+        background: #e8f0fe;
+        padding: 1rem;
+        border-left: 4px solid var(--primary-color);
+        margin: 1rem 0;
+        border-radius: 0 4px 4px 0;
+      }
+
+      .metadata {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+
+      th,
+      td {
+        padding: 0.75rem;
+        border: 1px solid var(--border-color);
+        text-align: left;
+      }
+
+      th {
+        background: var(--secondary-bg);
+      }
+    </style> -->
+  </head>
+  <body>
+    <h1>Design Document - Vadlamani Uday Kumar</h1>
+
+    <div class="section">
+      <h2>Summary</h2>
+      <p>
+        This document proposes a serverless architecture for a large-scale
+        e-commerce platform, demonstrating how modern web technologies can
+        support a significant portion of e-commerce functionality without
+        traditional backend servers. While some features require compromise, the
+        benefits in cost, scalability, and performance make this approach viable
+        for many use cases.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Architecture Overview</h2>
+
+      <h3>Static Site Generation Pipeline</h3>
+      <ol>
+        <li>
+          <strong>Data Processing</strong>
+          <ul>
+            <li>
+              Pull product data from existing databases/APIs during build time
+            </li>
+            <li>Generate optimized JSON chunks (~1000 products per file)</li>
+            <li>Create pre-computed search indices using Lunr.js</li>
+            <li>Generate static category pages and product detail pages</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Build Process</strong>
+          <ul>
+            <li>Daily automated builds using GitHub Actions</li>
+            <li>
+              Incremental builds for price/inventory updates (every 4 hours)
+            </li>
+            <li>Emergency builds triggered by critical updates</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Deployment Strategy</strong>
+          <ul>
+            <li>Primary deployment to Cloudflare Pages</li>
+            <li>Edge caching for static assets</li>
+            <li>Fallback to regional CDN nodes</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>Core Components</h2>
+
+      <h3>1. Search System</h3>
+      <ul>
+        <li>Client-side search engine using Lunr.js</li>
+        <li>
+          Features:
+          <ul>
+            <li>Word stemming and fuzzy matching</li>
+            <li>Relevance scoring</li>
+            <li>Typo tolerance</li>
+          </ul>
+        </li>
+        <li>
+          Optimization:
+          <ul>
+            <li>Split search index by categories</li>
+            <li>Load indices on demand</li>
+            <li>Compressed binary format (~30% size reduction)</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>2. Product Catalog</h3>
+      <ul>
+        <li>Chunked JSON data files</li>
+        <li>Progressive loading based on user navigation</li>
+        <li>Local storage caching for frequently accessed data</li>
+        <li>Compression ratio target: 10:1 for product data</li>
+      </ul>
+
+      <h3>3. Client-Side State Management</h3>
+      <ul>
+        <li>Shopping cart in localStorage</li>
+        <li>Recently viewed items</li>
+        <li>User preferences</li>
+        <li>Wishlist management</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Technical Limitations and Solutions</h2>
+
+      <div class="highlight">
+        <h3>Data Size Constraints</h3>
+        <ol>
+          <li>
+            <strong>Browser Storage Limits</strong>
+            <ul>
+              <li>localStorage: ~5-10MB</li>
+              <li>IndexedDB: ~50% of available disk space</li>
+              <li>Solution: Chunked loading and LRU cache</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Search Index Size</strong>
+            <ul>
+              <li>Maximum practical size: ~100MB compressed</li>
+              <li>Support up to 100,000 products with full text search</li>
+              <li>Larger catalogs require category-specific indices</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <h3>Performance Targets</h3>
+      <ul>
+        <li>First Contentful Paint: < 1.5s</li>
+        <li>Time to Interactive: < 2s</li>
+        <li>Search Response Time: < 100ms</li>
+        <li>Smooth scrolling with 1000+ products loaded</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Business Benefits</h2>
+
+      <h3>1. Cost Efficiency</h3>
+      <ul>
+        <li>90% reduction in server costs</li>
+        <li>Zero scaling infrastructure needed</li>
+        <li>Reduced operational complexity</li>
+      </ul>
+
+      <h3>2. Performance</h3>
+      <ul>
+        <li>Global CDN presence</li>
+        <li>Predictable performance</li>
+        <li>Offline capabilities</li>
+      </ul>
+
+      <h3>3. Reliability</h3>
+      <ul>
+        <li>No server downtime</li>
+        <li>Reduced points of failure</li>
+        <li>Simplified deployment</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Implementation Phases</h2>
+
+      <table>
+        <tr>
+          <th>Phase</th>
+          <th>Features</th>
+        </tr>
+        <tr>
+          <td>Phase 1: MVP</td>
+          <td>
+            <ul>
+              <li>Basic product catalog</li>
+              <li>Category navigation</li>
+              <li>Simple search</li>
+              <li>Shopping cart</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Phase 2: Enhanced Features</td>
+          <td>
+            <ul>
+              <li>Advanced search</li>
+              <li>Product recommendations</li>
+              <li>Recently viewed</li>
+              <li>User preferences</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Phase 3: Optimization</td>
+          <td>
+            <ul>
+              <li>Performance tuning</li>
+              <li>Search index optimization</li>
+              <li>Progressive loading refinement</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Integration Points</h2>
+      <p>
+        While maintaining a serverless frontend, these functions require
+        external services:
+      </p>
+
+      <ol>
+        <li>Payment Processing</li>
+        <li>User Authentication</li>
+        <li>Order Management</li>
+      </ol>
+    </div>
+  </body>
+</html>
