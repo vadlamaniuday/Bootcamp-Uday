@@ -8,7 +8,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const API_KEY = import.meta.env.VITE_WEATHERMAP_API_KEY;
+  const API_KEY = import.meta.env.OWM_API_KEY;
 
   const fetchWeather = async (city) => {
     try {

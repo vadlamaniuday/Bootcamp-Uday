@@ -33,7 +33,7 @@ function App() {
     const filtered = filterPapers(papers, filters);
     setFilteredPapers(filtered);
     setFiltersApplied(true);
-    setCurrentPage(1); // Reset to first page when filters change
+    setCurrentPage(1); 
   };
 
   const handleClearFilters = () => {
@@ -54,7 +54,7 @@ function App() {
 
   const handlePageSizeChange = (newSize) => {
     setPageSize(newSize);
-    setCurrentPage(1); // Reset to first page when page size changes
+    setCurrentPage(1);
   };
 
   if (loading) return <LoadingSpinner />;
@@ -68,7 +68,7 @@ function App() {
     <div className="min-h-screen bg-gray-100 p-8">
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">Paper Data Filter</h1>
+          <h1 className="text-3xl font-bold">YResearcher</h1>
           <button
             onClick={() => exportToJson(displayedPapers)}
             className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
