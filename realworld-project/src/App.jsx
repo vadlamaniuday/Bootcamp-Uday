@@ -75,7 +75,7 @@ function App() {
               <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
                 {result.short_form}
               </span>
-              <p className="text-gray-600 text-sm mt-2 line-clamp-3">
+              <p className="text-gray-600 text-sm mt-2 ">
                 {result.description?.join(" ") || "No description available."}
               </p>
             </div>
